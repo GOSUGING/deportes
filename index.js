@@ -11,7 +11,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 // Middleware para parsear JSON
 app.use(express.json());
 
-const SPORTS_FILE_PATH = 'C:\\Users\\Aron\\Documents\\Curso Javascript\\Proyectos\\Deportes sv\\sports.json';
+
+const SPORTS_FILE_PATH = path.join(__dirname, 'sports.json');
+
 
 // Función para leer el archivo de deportes
 async function readSportsFile() {
